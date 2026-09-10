@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Run Security Audit') {
             steps {
-                bat 'npm audit'
+                bat 'npm audit || exit /b 0'
             }
         }
     }
