@@ -9,12 +9,12 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                sh 'npm install'
+                bat 'npm install'
             }
         }
         stage('Run Security Audit') {
             steps {
-                sh 'npm audit || true'
+                bat 'npm audit'
             }
         }
     }
